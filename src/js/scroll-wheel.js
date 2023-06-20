@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollTrigger)
 let triggers = document.querySelectorAll('.js-trigger')
 
 triggers.forEach((item, index) => { 
-    let onTitle = document.querySelectorAll('.js-title')
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: item,
@@ -32,7 +31,34 @@ triggers.forEach((item, index) => {
             },
         }
     })
+
+    let tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: item,
+            start: 'top top',
+            end: 'bottom top',
+            markers: false,
+            onEnter: () => {
+                tl2
+                .to('.js-title', { opacity: 1 })
+            },
+            onEnterBack: () => {
+                tl2
+                .to('.js-title', { opacity: 1 })
+            },
+            onLeave: () => {
+                tl2
+                .to('.js-title', { opacity: 0 })
+            },
+            onLeaveBack: () => {
+                tl2
+                .to('.js-title', { opacity: 0 })
+            },
+        }
+    })
 })
+
+
 
 
 
