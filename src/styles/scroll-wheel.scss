@@ -4,38 +4,38 @@
     transform: translate(-50%, 0%);
 }
 
-.css-item {
+.css-card {
     transform: rotate(calc(var(--item-angle) * 25deg)) translateY(-150%);
 }
 
-.css-item-1 {
+.css-card-1 {
     --item-angle: 0;
 }
 
-.css-item-2 {
+.css-card-2 {
     --item-angle: 45;
 }
 
-.css-item-3 {
+.css-card-3 {
     --item-angle: 90;   
 }
 
-.css-item-4 {
+.css-card-4 {
     --item-angle: 135;
 }
 
-.css-item-5 {
+.css-card-5 {
     --item-angle: 180;
 }
 
-.css-item-6 {
+.css-card-6 {
     --item-angle: 225;
 }
 
-.css-item-7 {
+.css-card-7 {
     --item-angle: 270;
 }
 
-.css-item-8 {
+.css-card-8 {
     --item-angle: 315;
 }
