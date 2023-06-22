@@ -6,3 +6,12 @@
 html.is-animating .transition-fade {
     opacity: 0;
 }
+
+.transition-scale {
+    transition: 1s;
+    scale: (1);
+}
+
+html.is-animating .transition-scale {
+    scale: (2);
+}

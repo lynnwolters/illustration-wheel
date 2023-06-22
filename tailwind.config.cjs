@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./src/index.html",
-    "./src/spring-time.html",
+    "./src/bird-mom.html",
     "./src/*.js",
   ],
   theme: {
