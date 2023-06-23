@@ -19,8 +19,9 @@
 
   <body>
 
-    <nav class="w-screen h-[80px] fixed flex justify-between items-center px-8 font-[DM Sans]">
+    <nav class="w-screen h-[80px] fixed flex justify-between items-center px-8 font-[DM Sans] z-[100]">
       <a href="index.html">Studio Sophia</a>
+      <a class="js-continue" href="bird-mom.html">Continue</a>
       <ul class="flex">
         <li class="mr-8">
           <a href="#">About</a>
@@ -35,29 +36,24 @@
 
       <div class="w-screen relative">
 
-        <div class="h-screen js-triggers">
-          <div class="w-screen h-[50%] js-trigger"></div>
-          <div class="w-screen h-[50%] js-trigger"></div>
-        </div>
-
-        <div class="h-screen js-triggers">
-          <div class="w-screen h-[50%] js-trigger"></div>
+        <div class="h-screen js-triggers z-50">
+          <div class="w-screen h-[50%] bg-[#808080] js-trigger"></div>
           <div class="w-screen h-[50%] js-trigger"></div>
         </div>
 
         <div class="h-screen js-triggers">
-          <div class="w-screen h-[50%] js-trigger"></div>
-          <div class="w-screen h-[50%] js-trigger"></div>
-        </div>
-
-        <div class="h-screen js-triggers">
-          <div class="w-screen h-[50%] js-trigger"></div>
+          <div class="w-screen h-[50%] bg-[#808080] js-trigger"></div>
           <div class="w-screen h-[50%] js-trigger"></div>
         </div>
 
         <div class="h-screen js-triggers">
-          <div class="w-screen h-[50%]"></div>
-          <div class="w-screen h-[50%]"></div>
+          <div class="w-screen h-[50%] bg-[#808080] js-trigger"></div>
+          <div class="w-screen h-[50%] js-trigger"></div>
+        </div>
+
+        <div class="h-screen js-triggers">
+          <div class="w-screen h-[50%] bg-[#808080] js-trigger"></div>
+          <div class="w-screen h-[50%] js-trigger"></div>
         </div>
 
         <div class="w-1/2 aspect-square fixed flex items-center justify-center css-wheel js-wheel">
@@ -65,7 +61,7 @@
           <div class="absolute w-[275px] aspect-[4/6] css-card css-card-1 js-card">
             <div class="pb-24 font-[MoglanDemo] opacity-0 text-black text-6xl text-center js-title">Fashion Week</div>
             <a href="fashion-week.html">          
-              <img class="w-full h-full object-cover opacity-50 js-image" src="./img/1.jpg" alt="1">
+              <img class="w-full h-full object-cover js-image" src="./img/1.jpg" alt="1">
             </a>
           </div>
 
@@ -76,10 +72,10 @@
             </a>
           </div>
 
-          <div class="absolute w-[275px] aspect-[4/6] css-card css-card-3 js-card">
+          <div class="absolute w-[275px] aspect-[4/6] css-card css-card-3 js-card js-begin-state">
             <div class="pb-24 font-[MoglanDemo] opacity-0 text-black text-6xl text-center js-title">Bird Mom</div>
             <a href="bird-mom.html">          
-              <img class="w-full h-full object-cover opacity-50 js-image" src="./img/3.jpg" alt="3">
+              <img class="w-full h-full object-cover opacity-50 js-image js-image-bird-mom" src="./img/3.jpg" alt="3">
             </a>
           </div>
 
