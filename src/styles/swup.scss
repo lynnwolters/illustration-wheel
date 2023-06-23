@@ -1,5 +1,5 @@
 .transition-fade {
-    transition: 3s;
+    transition: 1s;
     opacity: 1;
 }
 
@@ -7,7 +7,7 @@ html.is-animating .transition-fade {
     opacity: 0;
 }
 
-.flip {
-    transition: all 1.5s ease-out;
-    scale: 2;
-}
+// .flip {
+//     transition: all 1.5s ease-out;
+//     scale: 2;
+// }

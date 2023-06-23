@@ -1,11 +1,11 @@
-.css-wheel {
+.css-card-wheel {
     left: 50%;
     bottom: -50%;
     transform: translate(-50%, 0%);
 }
 
 .css-card {
-    transform: rotate(calc(var(--item-angle) * 25deg)) translateY(-150%);
+    transform: rotate(calc(var(--item-angle) * 25deg)) translateY(-140%);
 }
 
 .css-card-1 {
@@ -38,9 +38,4 @@
 
 .css-card-8 {
     --item-angle: 315;
-}
-
-.css-scale-image {
-    transition: all 1s ease-out;
-    scale: 2;
 }
