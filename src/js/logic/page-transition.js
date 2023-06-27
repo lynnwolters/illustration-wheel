@@ -18,6 +18,13 @@ export class PageTransition {
         })
     }
 
+    overlayColor = () => {
+        let overlayColor = ''
+        if () {
+            overlayColor = '#C8D5F7'
+        }
+    }
+
     startPageTransition = (image) => {
         let tl = gsap.timeline({})
             tl
@@ -26,5 +33,15 @@ export class PageTransition {
             .to('.js-overlay', {y: '-100%'})
     }
 }
+
+// const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
+// if (isTouchDevice) {
+//     console.log('On a touch device!')
+//     rectangle.addEventListener('click', (event) => {
+//         this.touchDeviceState(rectangle, event)
+//     })
+// } else {
+//     console.log('Not on a touch device!')
+// }
 
 
