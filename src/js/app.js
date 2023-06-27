@@ -6,6 +6,7 @@
 import { Router } from './router' 
 import { Page } from './page' 
 import { ScrollWheel } from './logic/scroll-wheel.js'
+import { PageTransition } from './logic/page-transition.js'
 
 export class App { 
     constructor () { 
@@ -15,6 +16,7 @@ export class App {
     init = () => { 
         this.router = new Router()
         this.scrollWheel = new ScrollWheel()
+        this.pageTransition = new PageTransition()
     }
 
     handleContentReplaced = () => { 

@@ -2,6 +2,7 @@
 // hierin komt alle code dat na content replaced moet komen (dus niet op domcotentrecplaced)
 
 import { ScrollWheel } from './logic/scroll-wheel'
+import { PageTransition } from './logic/page-transition'
 
 export class Page {
     constructor () {
@@ -12,6 +13,7 @@ export class Page {
     init = () => {
         this.getPageTitle()
         this.scrollWheel = new ScrollWheel()
+        this.pageTransition = new PageTransition()
     }
 
     getPageTitle = () => {

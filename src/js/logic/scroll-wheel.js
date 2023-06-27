@@ -39,7 +39,7 @@ export class ScrollWheel {
                     trigger: item,
                     start: 'top top',
                     end: 'bottom top',
-                    markers: true,
+                    markers: false,
                     onEnter: () => {
                         this.firstTrigger(index)
                         tl
