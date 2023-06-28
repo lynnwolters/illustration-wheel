@@ -6,7 +6,9 @@ export class PageTransition {
         if (!this.overlay) {
             return false
         }
-        this.images = document.querySelectorAll('.js-image')
+        this.activatePageTransition = document.querySelectorAll('.js-image')
+        this.image = document.querySelectorAll('.js-image')
+        this.cardWheel = document.querySelectorAll('.js-card-wheel')
         this.imageOne = document.querySelector('.js-image-one')
         this.imageTwo = document.querySelector('.js-image-two')
         this.imageThree = document.querySelector('.js-image-three')
@@ -23,55 +25,50 @@ export class PageTransition {
     }
 
     bindEvents = () => {
-        this.images.forEach(image => {
-            image.addEventListener('click', () => {
-                this.overlayColor(image)
-                this.pageTransition(image)
+        this.activatePageTransition.forEach((item) => {
+            item.addEventListener('click', () => {
+                this.overlayColor(item)
+                this.pageTransition(item)
             })
         })
     }
 
-    overlayColor = (image) => {
-        console.log('hello')
+    overlayColor = (item) => {
         this.overlayColor = ''
-        if (image === this.imageOne) {
+        if (item === this.imageOne) {
             this.overlayColor = '#C8D5F7'
         }
-        if (image === this.imageTwo) {
+        if (item === this.imageTwo) {
             this.overlayColor = '#A1CB5B'
         }
-        if (image === this.imageThree) {
+        if (item === this.imageThree) {
             this.overlayColor = '#EBE9EC'
         }
-        if (image === this.imageFour) {
+        if (item === this.imageFour) {
             this.overlayColor = '#F7DBF4'
         }
-        if (image === this.imageVife) {
+        if (item === this.imageVife) {
             this.overlayColor = '#EBC4C5'
         }
-        if (image === this.imageSix) {
+        if (item === this.imageSix) {
             this.overlayColor = '#FAEDE5'
         }
-        if (image === this.imageSeven) {
+        if (item === this.imageSeven) {
             this.overlayColor = '#92B4FE'
         }
-        if (image === this.imageEight) {
+        if (item === this.imageEight) {
             this.overlayColor = '#F0502C'
         }
-        this.overlay.forEach(overlay => {
+        this.overlay.forEach((overlay) => {
             overlay.style.backgroundColor = this.overlayColor
         })
     }
 
-    pageTransition = (image) => {
+    pageTransition = (item) => {
         let tl = gsap.timeline({})
-            tl
-            .to(image, {y: -100, ease: 'Power1.easeOut'})
-            .to('.js-overlay', {y: '100%'})
-            .to('.js-overlay', {y: '-100%'})
+        tl
+        .to(item, {y: -150, duration: .4})
+        .to(this.overlay, { y: '100%' })
+        .to(this.overlay, { y: '-100%' })
     }
 }
-
-
-
-

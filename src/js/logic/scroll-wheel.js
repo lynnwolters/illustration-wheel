@@ -14,16 +14,8 @@ export class ScrollWheel {
     }
 
     init = () => {
-        this.activateFirstTrigger(0)
         this.scrollWheel()
-    }
-
-    activateFirstTrigger = (index) => {
-        let titles = this.cards[index].querySelector('.js-title')
-        let tl = gsap.timeline()
-        tl
-        .to(titles, {opacity: 1}, '+=1')
-        
+        this.showCardOneTitle() 
     }
 
     scrollWheel = () => {
@@ -36,16 +28,16 @@ export class ScrollWheel {
                     end: 'bottom top',
                     markers: false,
                     onEnter: () => {
-                        this.activateFirstTrigger(index)
                         tl
                         .to(this.cardWheel, {rotation: `${-45 * index}`, duration: 2})
-                        .fromTo(titles, {y: 30}, {y: -0}, '-=1')
+                        .to(titles, {opacity: 1})
+                        .fromTo(titles, {y: 30}, {y: -0}, '-=.5')
                     },
                     onEnterBack: () => {
                         tl
                         .to(this.cardWheel, {rotation: `${-45 * index}`, duration: 2})
                         .to(titles, {opacity: 1})
-                        .fromTo(titles, {y: 30}, {y: -0}, '-=1')
+                        .fromTo(titles, {y: 30}, {y: -0}, '-=.5')
                     },
                     onLeave: () => {
                         tl.to(titles, {opacity: 0})
@@ -56,5 +48,10 @@ export class ScrollWheel {
                 }
             })
         })
+    }
+
+    showCardOneTitle = () => {
+        let cardOneTitle = this.cards[0].querySelector('.js-title')
+        gsap.to(cardOneTitle, {opacity: 1})
     }
 }
